@@ -1,0 +1,8 @@
+---
+   -name:httpd is there
+    hosts:jenkins_practice
+    tasks:
+      -name:install packages
+       yum:
+         name:httpd
+         state:latest
