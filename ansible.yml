@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: True
+  tasks:
+   - name: pulling image
+     command: docker pull sslvd/docker_jenkins:2.0
+   
+   - name: run
+     command: docker run -p 3000:3000 sslvd/docker_jenkins:2.0
